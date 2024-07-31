@@ -249,6 +249,14 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 # bindsym $mod+Shift+period exec systemctl suspend
 bindsym $mod+Shift+period exec i3lock
 
-# exec --no-startup-id picom -b
+# exec --no-startup-id picom -
 exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
 exec --no-startup-id nitrogen --set-zoom-fill ~/Pictures/Wallpapers/wp.jpg
+
+
+exec --no-startup-id xss-lock -- ~/.config/i3/lock.sh
+bindsym ctrl+$mod+l exec --no-startup-id sleep 1 && xset dpms force suspend
+
+# move focused workspace between monitors
+bindsym $mod+Ctrl+greater move workspace to output right
+bindsym $mod+Ctrl+less move workspace to output left
