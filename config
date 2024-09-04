@@ -258,5 +258,7 @@ exec --no-startup-id xss-lock -- ~/.config/i3/lock.sh
 bindsym ctrl+$mod+l exec --no-startup-id sleep 1 && xset dpms force suspend
 
 # move focused workspace between monitors
-bindsym $mod+Ctrl+greater move workspace to output right
-bindsym $mod+Ctrl+less move workspace to output left
+bindsym $mod+Ctrl+l move workspace to output right
+bindsym $mod+Ctrl+h move workspace to output left
+bindsym $mod+Ctrl+k move workspace to output up
+bindsym $mod+Ctrl+j move workspace to output down
